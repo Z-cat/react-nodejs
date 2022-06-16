@@ -3,7 +3,7 @@ var router = express.Router();
 const url = require('url');
 const data = require('./login.json')
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.Post('/', function(req, res, next) {
   console.log(url.parse(req.url,true).query.username);
   const {username,password} =url.parse(req.url,true).query
   if(username&&password){
